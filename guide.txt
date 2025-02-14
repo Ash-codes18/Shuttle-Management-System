@@ -1,0 +1,11 @@
+cmake -G "MinGW Makefiles" -S . -B build
+cmake --build build
+./build/shuttle_system
+
+Clean the Build Directory
+
+If you encounter strange errors, delete the build directory and start fresh:
+
+rm -rf build
+cmake -S . -B build
+cmake --build build

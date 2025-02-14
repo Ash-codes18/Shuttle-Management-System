@@ -1,0 +1,8 @@
+Morning,7:00 AM - 9:00 AM,8:00 AM Classes
+Library,3
+CSE Block,5
+---
+Afternoon,12:00 PM - 3:00 PM,2:00 PM classes
+Fashion Block,2
+NK Food Court,4
+---
