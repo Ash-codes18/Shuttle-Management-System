@@ -76,6 +76,11 @@ When the program runs, you will see a menu like the following:
 Follow the on-screen prompts to interact with the system. For automated testing or CI purposes, you can pipe inputs to the executable.
 
 
+#### Admin Acesss
+
+- **Id       : admin**
+- **Password : admin123**
+
 ## Continuous Integration
 
 This repository is configured with GitHub Actions for continuous integration. The workflow files in the `.github/workflows` directory handle building and testing the project on both Ubuntu and Windows environments.
