@@ -1,3 +1,0 @@
-"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\shuttle_system.dir/objects.a
-C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\shuttle_system.dir/objects.a @CMakeFiles\shuttle_system.dir\objects1.rsp
-C:\msys64\mingw64\bin\c++.exe -Wl,--whole-archive CMakeFiles\shuttle_system.dir/objects.a -Wl,--no-whole-archive -o shuttle_system.exe -Wl,--out-implib,libshuttle_system.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\shuttle_system.dir\linkLibs.rsp

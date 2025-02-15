@@ -1,3 +1,0 @@
-C:/Users/Ashmit/Desktop/Shuttle-Management-System/build/CMakeFiles/shuttle_system.dir
-C:/Users/Ashmit/Desktop/Shuttle-Management-System/build/CMakeFiles/edit_cache.dir
-C:/Users/Ashmit/Desktop/Shuttle-Management-System/build/CMakeFiles/rebuild_cache.dir
