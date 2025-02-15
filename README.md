@@ -1,6 +1,6 @@
 # Shuttle Management System
 
-Welcome to the Shuttle Management System repository! This project implements an interactive system for managing shuttle schedules and user interactions. It provides a simple console-based interface for student login, student registration, and administrator functions.
+This project implements an interactive system for managing shuttle schedules and user interactions. It provides a simple console-based interface for student login, student registration, and administrator functions.
 
 ## Features
 
@@ -23,8 +23,7 @@ Shuttle-Management-System/
 
 - **CMake** (version 3.10 or later)
 - **C/C++ Compiler**:
-  - Linux: gcc or clang
-  - Windows: MSVC (Visual Studio recommended)
+  - gcc or clang
 - **Make** (for Unix-like systems) or an appropriate build system for Windows
 
 ## Building the Project
@@ -41,43 +40,21 @@ Shuttle-Management-System/
 2. **Create a Build Directory and Configure the Project:**
 
    ```bash
-   mkdir build
-   cd build
-   cmake .. -DCMAKE_BUILD_TYPE=Release
+   cmake -G "MinGW Makefiles" -S . -B build
    ```
 
 3. **Build the Executable:**
 
    ```bash
-   cmake --build . --config Release
+   cmake --build build
    ```
-
-   *Note*: On Windows, if using a multi-configuration generator (e.g., Visual Studio), the executable will be located inside a subdirectory such as `Release`.
-
-### Using the Makefile (Unix-like Systems)
-
-You can also build the project with the provided Makefile:
-
-```bash
-make
-```
 
 ## Running the System
 
 After a successful build, run the executable from your build output directory:
 
-### On Linux/Ubuntu
-
 ```bash
 ./shuttle_system
-```
-
-### On Windows
-
-If built with Visual Studio or via CMake with a multi-config generator, the executable might be located in the `Release` folder:
-
-```powershell
-.\Release\shuttle_system.exe
 ```
 
 When the program runs, you will see a menu like the following:
