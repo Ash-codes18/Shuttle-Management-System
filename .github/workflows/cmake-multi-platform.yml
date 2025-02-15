@@ -1,4 +1,4 @@
-name: CMake for Multiple Platforms
+name: CMake on Multiple Platforms
 
 on:
   push:
@@ -12,7 +12,6 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
         build_type: [Release]
-        # Define compilers for each OS.
         include:
           - os: windows-latest
             c_compiler: cl
@@ -28,6 +27,12 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
+
+      - name: Clean build directory
+        run: |
+          if [ -d "${{ github.workspace }}/build" ]; then
+            rm -rf "${{ github.workspace }}/build"
+          fi
 
       - name: Set build output directory
         id: build_dir
