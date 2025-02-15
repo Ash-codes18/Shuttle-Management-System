@@ -2,19 +2,23 @@ cmake_minimum_required(VERSION 3.10)
 project(ShuttleSystem)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+include_directories(${PROJECT_SOURCE_DIR}/include)
+
 
 # Add all source files
 set(SOURCES
-    main.cpp
-    Authentication.cpp
-    Route.cpp
-    ShuttleSystem.cpp
-    Stop.cpp
-    Student.cpp
-    Wallet.cpp
-    Booking.cpp
-    BookingManager.cpp
-    TransferManager.cpp
+    src/main.cpp
+    src/Authentication.cpp
+    src/Route.cpp
+    src/ShuttleSystem.cpp
+    src/Stop.cpp
+    src/Student.cpp
+    src/Wallet.cpp
+    src/Booking.cpp
+    src/BookingManager.cpp
+    src/TransferManager.cpp
 )
 
 # Create the executable

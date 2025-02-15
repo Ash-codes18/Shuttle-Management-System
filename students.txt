@@ -1,2 +1,2 @@
-ash,gmail,halua,100
-pankaj,ps@gmail,123,1000
+ash,gmail,halua,125
+pankaj,ps@gmail,123,200
