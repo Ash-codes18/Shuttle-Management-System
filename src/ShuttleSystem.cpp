@@ -55,7 +55,6 @@ void ShuttleSystem::suggestOptimalRoutes() const
         // Prioritize routes with higher demand and peak hours
         return a.getPeakHours() > b.getPeakHours(); });
 
-    // Display optimal routes
     for (const auto &route : sortedRoutes)
     {
         std::cout << "Route: " << route.getRouteName() << std::endl;
@@ -90,7 +89,7 @@ void ShuttleSystem::saveRoutesToFile() const
                 file << stop.getStopName() << ","
                      << stop.getDemandLevel() << "\n";
             }
-            file << "---\n"; // Separator between routes
+            file << "---\n"; 
         }
         file.close();
     }
@@ -110,7 +109,7 @@ void ShuttleSystem::loadRoutesFromFile()
         {
             if (line == "---")
             {
-                continue; // Skip separator
+                continue; 
             }
 
             std::stringstream ss(line);
@@ -126,7 +125,7 @@ void ShuttleSystem::loadRoutesFromFile()
             {
                 if (line == "---")
                 {
-                    break; // End of route
+                    break; 
                 }
 
                 std::stringstream ssStop(line);

@@ -4,18 +4,15 @@
 #include <fstream>
 #include <sstream>
 
-// Constructor
 Route::Route(const std::string &name, const std::string &peak, const std::string &schedule)
     : routeName(name), peakHours(peak), classSchedule(schedule) {}
 
-// Copy constructor
 Route::Route(const Route &other)
     : routeName(other.routeName),
       stops(other.stops),
       peakHours(other.peakHours),
       classSchedule(other.classSchedule) {}
 
-// Copy assignment operator
 Route &Route::operator=(const Route &other)
 {
     if (this != &other)
@@ -28,14 +25,12 @@ Route &Route::operator=(const Route &other)
     return *this;
 }
 
-// Move constructor
 Route::Route(Route &&other) noexcept
     : routeName(std::move(other.routeName)),
       stops(std::move(other.stops)),
       peakHours(std::move(other.peakHours)),
       classSchedule(std::move(other.classSchedule)) {}
 
-// Move assignment operator
 Route &Route::operator=(Route &&other) noexcept
 {
     if (this != &other)
@@ -152,7 +147,6 @@ void Route::loadRouteFromFile()
     }
 }
 
-// New member function: checks if the route contains a stop with the given name.
 bool Route::hasStop(const std::string &stopName) const
 {
     for (const auto &stop : stops)
@@ -163,7 +157,6 @@ bool Route::hasStop(const std::string &stopName) const
     return false;
 }
 
-// New member function: returns the index of the stop; returns -1 if not found.
 int Route::getStopIndex(const std::string &stopName) const
 {
     for (size_t i = 0; i < stops.size(); ++i)
@@ -171,5 +164,5 @@ int Route::getStopIndex(const std::string &stopName) const
         if (stops[i].getStopName() == stopName)
             return static_cast<int>(i);
     }
-    return -1; // not found
+    return -1;
 }

@@ -14,14 +14,12 @@ void Wallet::deductFunds(Student &student, double amount)
 
 bool Wallet::isPeakHour()
 {
-    // Get the current time
     std::time_t now = std::time(nullptr);
     std::tm *localTime = std::localtime(&now);
 
-    int currentHour = localTime->tm_hour;  // Current hour (0-23)
-    int currentMinute = localTime->tm_min; // Current minute (0-59)
+    int currentHour = localTime->tm_hour;  
+    int currentMinute = localTime->tm_min; 
 
-    // Define peak hours (7:00 AM - 9:00 AM and 5:00 PM - 7:00 PM)
     bool isMorningPeak = (currentHour == 7 && currentMinute >= 0) ||
                          (currentHour == 8 && currentMinute >= 0) ||
                          (currentHour == 9 && currentMinute == 0);

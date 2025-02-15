@@ -41,11 +41,9 @@ int main()
 {
     Authentication auth;
     ShuttleSystem shuttleSystem;
-    // Create BookingManager instance with pointer to shuttleSystem.
     BookingManager bookingManager(&shuttleSystem);
     TransferManager transferManager(&shuttleSystem);
 
-    // Load persistent data.
     auth.loadStudentsFromFile();
     shuttleSystem.loadRoutesFromFile();
 
@@ -62,7 +60,7 @@ int main()
         std::cout << "4. Exit" << std::endl;
         std::cout << "Enter your choice: ";
         std::cin >> choice;
-        std::cin.ignore(); // Clear newline
+        std::cin.ignore(); 
 
         if (choice == 1)
         {
@@ -99,7 +97,6 @@ int main()
                     }
                     case 3:
                     {
-                        // Book a trip: prompt for route, start stop, and end stop.
                         bookingManager.showAvailableRoutes();
                         std::cout << "Enter the route name to book a trip: ";
                         std::string routeName, startStop, endStop;
@@ -138,7 +135,6 @@ int main()
                     }
                     case 8:
                     {
-                        // Bus Transfer & Best Route Suggestion using TransferManager.
                         std::string originStop, destinationStop;
                         std::cout << "Enter origin stop: ";
                         std::getline(std::cin, originStop);

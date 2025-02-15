@@ -8,7 +8,6 @@
 #include <iomanip>
 #include <map>
 
-// Helper: Calculate fare using peak hour logic.
 double BookingManager::calculateCurrentFare() const
 {
     std::time_t now = std::time(nullptr);
@@ -38,7 +37,6 @@ void BookingManager::showAvailableRoutes() const
 bool BookingManager::bookTrip(Student &student, const std::string &routeName,
                               const std::string &startStop, const std::string &endStop)
 {
-    // Verify that the chosen route exists.
     Route *route = shuttleSystem->findRoute(routeName);
     if (!route)
     {
@@ -101,7 +99,7 @@ void BookingManager::displayTripHistory(const Student &student) const
         if (booking.getStudentEmail() == student.getEmail())
         {
             std::time_t bookingTime = booking.getBookingTime();
-            std::tm *timeInfo = std::localtime(&bookingTime); // Fixed: use local variable to take its address.
+            std::tm *timeInfo = std::localtime(&bookingTime); 
             char buffer[80];
             std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", timeInfo);
             std::cout << "Date & Time : " << buffer << "\n"
@@ -150,11 +148,11 @@ void BookingManager::generateExpenseReport(const Student &student) const
             totalExpense += booking.getFare();
             double diff = std::difftime(now, booking.getBookingTime());
             if (diff <= 7 * 24 * 3600)
-            { // 7 days
+            { 
                 weeklyExpense += booking.getFare();
             }
             if (diff <= 30 * 24 * 3600)
-            { // 30 days
+            { 
                 monthlyExpense += booking.getFare();
             }
         }

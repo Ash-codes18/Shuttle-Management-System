@@ -9,7 +9,7 @@ bool Authentication::registerStudent(const std::string &name, const std::string 
     if (studentExists(email))
     {
         logEvent("Registration failed: Email " + email + " already exists.");
-        return false; // Student already exists
+        return false;
     }
     students.push_back(Student(name, email, password));
     logEvent("Registration successful: " + name + " (" + email + ")");
@@ -119,10 +119,9 @@ void Authentication::loadStudentsFromFile()
 
 void Authentication::logEvent(const std::string &event) const
 {
-    std::ofstream file(logFile, std::ios::app); // Append mode
+    std::ofstream file(logFile, std::ios::app); 
     if (file.is_open())
     {
-        // Add timestamp to the log
         std::time_t now = std::time(nullptr);
         file << std::ctime(&now) << ": " << event << "\n";
         file.close();

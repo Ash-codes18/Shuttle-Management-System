@@ -16,12 +16,9 @@ private:
     bool active;
 
 public:
-    // Constructs a booking with student email, chosen route, fare,
-    // and the start and end stops of the trip.
     Booking(const std::string &studentEmail, const std::string &routeName, double fare,
             const std::string &startStop, const std::string &endStop);
 
-    // Default constructor for loading from file.
     Booking();
 
     std::string getStudentEmail() const;
@@ -32,15 +29,11 @@ public:
     double getFare() const;
     bool isActive() const;
 
-    // Mark the booking as cancelled.
     void cancel();
 
-    // Serialize the booking as a CSV string:
-    // studentEmail,routeName,startStop,endStop,bookingTime,fare,active
     std::string serialize() const;
 
-    // Deserialize booking data from a CSV string.
     void deserialize(const std::string &data);
 };
 
-#endif // BOOKING_H
+#endif 
