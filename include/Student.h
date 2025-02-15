@@ -3,7 +3,8 @@
 
 #include <string>
 
-class Student {
+class Student
+{
 private:
     std::string name;
     std::string email;
@@ -12,7 +13,7 @@ private:
 
 public:
     // Constructor
-    Student(const std::string& name, const std::string& email, const std::string& password);
+    Student(const std::string &name, const std::string &email, const std::string &password);
 
     // Getters
     std::string getName() const;
@@ -21,9 +22,9 @@ public:
     double getWalletBalance() const;
 
     // Setters
-    void setName(const std::string& name);
-    void setEmail(const std::string& email);
-    void setPassword(const std::string& password);
+    void setName(const std::string &name);
+    void setEmail(const std::string &email);
+    void setPassword(const std::string &password);
     void setWalletBalance(double balance);
 
     // Add funds to the wallet

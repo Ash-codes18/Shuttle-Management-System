@@ -3,21 +3,22 @@
 
 #include <string>
 
-class Stop {
+class Stop
+{
 private:
     std::string stopName; // Name of the stop
     int demandLevel;      // Demand level (e.g., high, medium, low)
 
 public:
     // Constructor
-    Stop(const std::string& name, int demand);
+    Stop(const std::string &name, int demand);
 
     // Getters
     std::string getStopName() const;
     int getDemandLevel() const;
 
     // Setters
-    void setStopName(const std::string& name);
+    void setStopName(const std::string &name);
     void setDemandLevel(int demand);
 
     // Display stop details

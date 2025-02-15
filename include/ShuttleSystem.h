@@ -6,20 +6,21 @@
 #include <fstream>
 #include "Route.h"
 
-class ShuttleSystem {
+class ShuttleSystem
+{
 private:
-    std::vector<Route> routes; // List of all routes
+    std::vector<Route> routes;                  // List of all routes
     const std::string routeFile = "routes.txt"; // File to store route data
 
 public:
     // Add a new route
-    void addRoute(const Route& route);
+    void addRoute(const Route &route);
 
     // Remove a route by name
-    void removeRoute(const std::string& routeName);
+    void removeRoute(const std::string &routeName);
 
     // Find a route by name
-    Route* findRoute(const std::string& routeName);
+    Route *findRoute(const std::string &routeName);
 
     // Display all routes
     void displayAllRoutes() const;
@@ -28,7 +29,7 @@ public:
     void suggestOptimalRoutes() const;
 
     // Get all routes
-    std::vector<Route>& getAllRoutes();
+    std::vector<Route> &getAllRoutes();
 
     // Save routes to file
     void saveRoutesToFile() const;

@@ -6,12 +6,14 @@
 #include "Student.h"
 
 // TransferManager provides smart transfer suggestions and supports multi-leg journey bookings.
-class TransferManager {
+class TransferManager
+{
 private:
-    ShuttleSystem* shuttleSystem;
+    ShuttleSystem *shuttleSystem;
+
 public:
     // Constructor that accepts a pointer to the ShuttleSystem instance.
-    TransferManager(ShuttleSystem* shuttleSystem);
+    TransferManager(ShuttleSystem *shuttleSystem);
 
     // Suggest the best transfer plan given an origin and destination stop.
     // Returns a string with the transfer details and estimated travel times.
