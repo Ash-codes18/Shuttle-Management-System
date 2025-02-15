@@ -6,3 +6,8 @@ Afternoon,12:00 PM - 3:00 PM,2:00 PM classes
 Fashion Block,2
 NK Food Court,4
 ---
+Outside ,7:00 PM - 9:00 PM,NA
+---
+Outside,12:00 PM - 2:00 PM,NA
+Main Gate,5
+---
