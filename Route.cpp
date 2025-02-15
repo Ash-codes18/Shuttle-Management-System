@@ -118,11 +118,28 @@ void Route::loadRouteFromFile() {
             int demandLevel;
             std::getline(ss, stopName, ',');
             ss >> demandLevel;
-
             stops.push_back(Stop(stopName, demandLevel));
         }
         file.close();
     } else {
         std::cerr << "Error: Unable to load route from file!" << std::endl;
     }
+}
+
+// New member function: checks if the route contains a stop with the given name.
+bool Route::hasStop(const std::string& stopName) const {
+    for (const auto& stop : stops) {
+        if (stop.getStopName() == stopName)
+            return true;
+    }
+    return false;
+}
+
+// New member function: returns the index of the stop; returns -1 if not found.
+int Route::getStopIndex(const std::string& stopName) const {
+    for (size_t i = 0; i < stops.size(); ++i) {
+        if (stops[i].getStopName() == stopName)
+            return static_cast<int>(i);
+    }
+    return -1; // not found
 }

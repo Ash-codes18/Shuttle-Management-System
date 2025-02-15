@@ -152,6 +152,54 @@ Authentication.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\shuttle_system.dir\build.make CMakeFiles/shuttle_system.dir/Authentication.cpp.s
 .PHONY : Authentication.cpp.s
 
+Booking.obj: Booking.cpp.obj
+.PHONY : Booking.obj
+
+# target to build an object file
+Booking.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\shuttle_system.dir\build.make CMakeFiles/shuttle_system.dir/Booking.cpp.obj
+.PHONY : Booking.cpp.obj
+
+Booking.i: Booking.cpp.i
+.PHONY : Booking.i
+
+# target to preprocess a source file
+Booking.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\shuttle_system.dir\build.make CMakeFiles/shuttle_system.dir/Booking.cpp.i
+.PHONY : Booking.cpp.i
+
+Booking.s: Booking.cpp.s
+.PHONY : Booking.s
+
+# target to generate assembly for a file
+Booking.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\shuttle_system.dir\build.make CMakeFiles/shuttle_system.dir/Booking.cpp.s
+.PHONY : Booking.cpp.s
+
+BookingManager.obj: BookingManager.cpp.obj
+.PHONY : BookingManager.obj
+
+# target to build an object file
+BookingManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\shuttle_system.dir\build.make CMakeFiles/shuttle_system.dir/BookingManager.cpp.obj
+.PHONY : BookingManager.cpp.obj
+
+BookingManager.i: BookingManager.cpp.i
+.PHONY : BookingManager.i
+
+# target to preprocess a source file
+BookingManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\shuttle_system.dir\build.make CMakeFiles/shuttle_system.dir/BookingManager.cpp.i
+.PHONY : BookingManager.cpp.i
+
+BookingManager.s: BookingManager.cpp.s
+.PHONY : BookingManager.s
+
+# target to generate assembly for a file
+BookingManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\shuttle_system.dir\build.make CMakeFiles/shuttle_system.dir/BookingManager.cpp.s
+.PHONY : BookingManager.cpp.s
+
 Route.obj: Route.cpp.obj
 .PHONY : Route.obj
 
@@ -248,6 +296,30 @@ Student.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\shuttle_system.dir\build.make CMakeFiles/shuttle_system.dir/Student.cpp.s
 .PHONY : Student.cpp.s
 
+TransferManager.obj: TransferManager.cpp.obj
+.PHONY : TransferManager.obj
+
+# target to build an object file
+TransferManager.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\shuttle_system.dir\build.make CMakeFiles/shuttle_system.dir/TransferManager.cpp.obj
+.PHONY : TransferManager.cpp.obj
+
+TransferManager.i: TransferManager.cpp.i
+.PHONY : TransferManager.i
+
+# target to preprocess a source file
+TransferManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\shuttle_system.dir\build.make CMakeFiles/shuttle_system.dir/TransferManager.cpp.i
+.PHONY : TransferManager.cpp.i
+
+TransferManager.s: TransferManager.cpp.s
+.PHONY : TransferManager.s
+
+# target to generate assembly for a file
+TransferManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\shuttle_system.dir\build.make CMakeFiles/shuttle_system.dir/TransferManager.cpp.s
+.PHONY : TransferManager.cpp.s
+
 Wallet.obj: Wallet.cpp.obj
 .PHONY : Wallet.obj
 
@@ -308,6 +380,12 @@ help:
 	@echo ... Authentication.obj
 	@echo ... Authentication.i
 	@echo ... Authentication.s
+	@echo ... Booking.obj
+	@echo ... Booking.i
+	@echo ... Booking.s
+	@echo ... BookingManager.obj
+	@echo ... BookingManager.i
+	@echo ... BookingManager.s
 	@echo ... Route.obj
 	@echo ... Route.i
 	@echo ... Route.s
@@ -320,6 +398,9 @@ help:
 	@echo ... Student.obj
 	@echo ... Student.i
 	@echo ... Student.s
+	@echo ... TransferManager.obj
+	@echo ... TransferManager.i
+	@echo ... TransferManager.s
 	@echo ... Wallet.obj
 	@echo ... Wallet.i
 	@echo ... Wallet.s

@@ -1,0 +1,5 @@
+gmail,Morning,1739621618,10,0,0,0
+gmail,Afternoon,1739621657,10,0,0,0
+gmail,Morning,Library,CSE Block,1739622148,10,1
+gmail,Morning,BH1,Library,1739623544,10,1
+gmail,Afternoon,BH1,Nk Fook Court,1739623861,10,1

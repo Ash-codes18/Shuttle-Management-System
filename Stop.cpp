@@ -1,7 +1,8 @@
 #include "Stop.h"
 #include <iostream>
 
-Stop::Stop(const std::string& name, int demand) : stopName(name), demandLevel(demand) {}
+Stop::Stop(const std::string& name, int demand)
+    : stopName(name), demandLevel(demand) {}
 
 std::string Stop::getStopName() const {
     return stopName;

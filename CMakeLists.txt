@@ -12,6 +12,9 @@ set(SOURCES
     Stop.cpp
     Student.cpp
     Wallet.cpp
+    Booking.cpp
+    BookingManager.cpp
+    TransferManager.cpp
 )
 
 # Create the executable

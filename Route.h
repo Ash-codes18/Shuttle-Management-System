@@ -53,6 +53,12 @@ public:
 
     // Load route from file
     void loadRouteFromFile();
+
+    // New member functions for TransferManager
+    // Returns true if the route contains a stop with the given name.
+    bool hasStop(const std::string& stopName) const;
+    // Returns the index of the stop in the stops vector; returns -1 if not found.
+    int getStopIndex(const std::string& stopName) const;
 };
 
 #endif // ROUTE_H

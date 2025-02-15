@@ -169,6 +169,48 @@ CMakeFiles/shuttle_system.dir/Wallet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shuttle_system.dir/Wallet.cpp.s"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Ashmit\Desktop\Shuttle-Management-System\Wallet.cpp -o CMakeFiles\shuttle_system.dir\Wallet.cpp.s
 
+CMakeFiles/shuttle_system.dir/Booking.cpp.obj: CMakeFiles/shuttle_system.dir/flags.make
+CMakeFiles/shuttle_system.dir/Booking.cpp.obj: C:/Users/Ashmit/Desktop/Shuttle-Management-System/Booking.cpp
+CMakeFiles/shuttle_system.dir/Booking.cpp.obj: CMakeFiles/shuttle_system.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Ashmit\Desktop\Shuttle-Management-System\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/shuttle_system.dir/Booking.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/shuttle_system.dir/Booking.cpp.obj -MF CMakeFiles\shuttle_system.dir\Booking.cpp.obj.d -o CMakeFiles\shuttle_system.dir\Booking.cpp.obj -c C:\Users\Ashmit\Desktop\Shuttle-Management-System\Booking.cpp
+
+CMakeFiles/shuttle_system.dir/Booking.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shuttle_system.dir/Booking.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Ashmit\Desktop\Shuttle-Management-System\Booking.cpp > CMakeFiles\shuttle_system.dir\Booking.cpp.i
+
+CMakeFiles/shuttle_system.dir/Booking.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shuttle_system.dir/Booking.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Ashmit\Desktop\Shuttle-Management-System\Booking.cpp -o CMakeFiles\shuttle_system.dir\Booking.cpp.s
+
+CMakeFiles/shuttle_system.dir/BookingManager.cpp.obj: CMakeFiles/shuttle_system.dir/flags.make
+CMakeFiles/shuttle_system.dir/BookingManager.cpp.obj: C:/Users/Ashmit/Desktop/Shuttle-Management-System/BookingManager.cpp
+CMakeFiles/shuttle_system.dir/BookingManager.cpp.obj: CMakeFiles/shuttle_system.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Ashmit\Desktop\Shuttle-Management-System\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/shuttle_system.dir/BookingManager.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/shuttle_system.dir/BookingManager.cpp.obj -MF CMakeFiles\shuttle_system.dir\BookingManager.cpp.obj.d -o CMakeFiles\shuttle_system.dir\BookingManager.cpp.obj -c C:\Users\Ashmit\Desktop\Shuttle-Management-System\BookingManager.cpp
+
+CMakeFiles/shuttle_system.dir/BookingManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shuttle_system.dir/BookingManager.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Ashmit\Desktop\Shuttle-Management-System\BookingManager.cpp > CMakeFiles\shuttle_system.dir\BookingManager.cpp.i
+
+CMakeFiles/shuttle_system.dir/BookingManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shuttle_system.dir/BookingManager.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Ashmit\Desktop\Shuttle-Management-System\BookingManager.cpp -o CMakeFiles\shuttle_system.dir\BookingManager.cpp.s
+
+CMakeFiles/shuttle_system.dir/TransferManager.cpp.obj: CMakeFiles/shuttle_system.dir/flags.make
+CMakeFiles/shuttle_system.dir/TransferManager.cpp.obj: C:/Users/Ashmit/Desktop/Shuttle-Management-System/TransferManager.cpp
+CMakeFiles/shuttle_system.dir/TransferManager.cpp.obj: CMakeFiles/shuttle_system.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\Ashmit\Desktop\Shuttle-Management-System\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/shuttle_system.dir/TransferManager.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/shuttle_system.dir/TransferManager.cpp.obj -MF CMakeFiles\shuttle_system.dir\TransferManager.cpp.obj.d -o CMakeFiles\shuttle_system.dir\TransferManager.cpp.obj -c C:\Users\Ashmit\Desktop\Shuttle-Management-System\TransferManager.cpp
+
+CMakeFiles/shuttle_system.dir/TransferManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/shuttle_system.dir/TransferManager.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Ashmit\Desktop\Shuttle-Management-System\TransferManager.cpp > CMakeFiles\shuttle_system.dir\TransferManager.cpp.i
+
+CMakeFiles/shuttle_system.dir/TransferManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/shuttle_system.dir/TransferManager.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Ashmit\Desktop\Shuttle-Management-System\TransferManager.cpp -o CMakeFiles\shuttle_system.dir\TransferManager.cpp.s
+
 # Object files for target shuttle_system
 shuttle_system_OBJECTS = \
 "CMakeFiles/shuttle_system.dir/main.cpp.obj" \
@@ -177,7 +219,10 @@ shuttle_system_OBJECTS = \
 "CMakeFiles/shuttle_system.dir/ShuttleSystem.cpp.obj" \
 "CMakeFiles/shuttle_system.dir/Stop.cpp.obj" \
 "CMakeFiles/shuttle_system.dir/Student.cpp.obj" \
-"CMakeFiles/shuttle_system.dir/Wallet.cpp.obj"
+"CMakeFiles/shuttle_system.dir/Wallet.cpp.obj" \
+"CMakeFiles/shuttle_system.dir/Booking.cpp.obj" \
+"CMakeFiles/shuttle_system.dir/BookingManager.cpp.obj" \
+"CMakeFiles/shuttle_system.dir/TransferManager.cpp.obj"
 
 # External object files for target shuttle_system
 shuttle_system_EXTERNAL_OBJECTS =
@@ -189,11 +234,14 @@ shuttle_system.exe: CMakeFiles/shuttle_system.dir/ShuttleSystem.cpp.obj
 shuttle_system.exe: CMakeFiles/shuttle_system.dir/Stop.cpp.obj
 shuttle_system.exe: CMakeFiles/shuttle_system.dir/Student.cpp.obj
 shuttle_system.exe: CMakeFiles/shuttle_system.dir/Wallet.cpp.obj
+shuttle_system.exe: CMakeFiles/shuttle_system.dir/Booking.cpp.obj
+shuttle_system.exe: CMakeFiles/shuttle_system.dir/BookingManager.cpp.obj
+shuttle_system.exe: CMakeFiles/shuttle_system.dir/TransferManager.cpp.obj
 shuttle_system.exe: CMakeFiles/shuttle_system.dir/build.make
 shuttle_system.exe: CMakeFiles/shuttle_system.dir/linkLibs.rsp
 shuttle_system.exe: CMakeFiles/shuttle_system.dir/objects1.rsp
 shuttle_system.exe: CMakeFiles/shuttle_system.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Ashmit\Desktop\Shuttle-Management-System\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable shuttle_system.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\Ashmit\Desktop\Shuttle-Management-System\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable shuttle_system.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\shuttle_system.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
