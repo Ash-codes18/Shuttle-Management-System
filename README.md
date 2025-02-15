@@ -1,6 +1,12 @@
 # Shuttle Management System
 
-This project implements an interactive system for managing shuttle schedules and user interactions. It provides a simple console-based interface for student login, student registration, and administrator functions.
+This program implements an interactive system for managing shuttle schedules and user interactions. It provides a simple console-based interface for student login, student registration, and administrator functions.
+
+Case Study Problem Statement : [Case Study PDF](https://github.com/Ash-codes18/Shuttle-Management-System/blob/main/Shuttle%20Management%20System.pdf)
+
+## Video Demonstration
+
+[![Shuttle Management System.mp4](https://idealer.io/wp-content/themes/iDealer/images/aicar.png)]()
 
 ## Features
 
