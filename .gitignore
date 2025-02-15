@@ -1,0 +1,26 @@
+# Ignore build directories
+/build/
+/Release/
+/x64/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Visual Studio files
+*.VC.db
+*.VC.VC.opendb
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Executable files
+*.exe
+*.out
+*.app
+
+# Other generated files
+*.log
