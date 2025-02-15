@@ -52,13 +52,15 @@ jobs:
 
       - name: Build project
         shell: bash
-        run: cmake --build "${{ steps.build_dir.outputs.BUILD_DIR }}" --config ${{ matrix.build_type }}
+        run: |
+          cmake --build "${{ steps.build_dir.outputs.BUILD_DIR }}" --config ${{ matrix.build_type }}
 
       - name: Run shuttle_system executable
         shell: bash
         run: |
+          # Pipe input "4" to the interactive executable so it exits gracefully.
           if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
-            "${{ steps.build_dir.outputs.BUILD_DIR }}/shuttle_system"
+            echo "4" | "${{ steps.build_dir.outputs.BUILD_DIR }}/shuttle_system"
           else
-            "${{ steps.build_dir.outputs.BUILD_DIR }}"\\shuttle_system.exe
+            echo "4" | "${{ steps.build_dir.outputs.BUILD_DIR }}"\\shuttle_system.exe
           fi
