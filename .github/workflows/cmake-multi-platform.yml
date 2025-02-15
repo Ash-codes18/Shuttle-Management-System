@@ -10,8 +10,8 @@ jobs:
   build:
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest]
-        build_type: [Release]
+        os: [ ubuntu-latest, windows-latest ]
+        build_type: [ Release ]
         include:
           - os: windows-latest
             c_compiler: cl
@@ -29,6 +29,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Clean build directory
+        shell: bash
         run: |
           if [ -d "${{ github.workspace }}/build" ]; then
             rm -rf "${{ github.workspace }}/build"
@@ -36,24 +37,28 @@ jobs:
 
       - name: Set build output directory
         id: build_dir
+        shell: bash
         run: |
           echo "BUILD_DIR=${{ github.workspace }}/build" >> $GITHUB_OUTPUT
 
       - name: Configure CMake
+        shell: bash
         run: |
-          cmake -B ${{ steps.build_dir.outputs.BUILD_DIR }} \
-                -S ${{ github.workspace }} \
+          cmake -B "${{ steps.build_dir.outputs.BUILD_DIR }}" \
+                -S "${{ github.workspace }}" \
                 -DCMAKE_C_COMPILER=${{ matrix.c_compiler }} \
                 -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }} \
                 -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
 
       - name: Build project
-        run: cmake --build ${{ steps.build_dir.outputs.BUILD_DIR }} --config ${{ matrix.build_type }}
+        shell: bash
+        run: cmake --build "${{ steps.build_dir.outputs.BUILD_DIR }}" --config ${{ matrix.build_type }}
 
       - name: Run shuttle_system executable
+        shell: bash
         run: |
           if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
-            ${{ steps.build_dir.outputs.BUILD_DIR }}/shuttle_system
+            "${{ steps.build_dir.outputs.BUILD_DIR }}/shuttle_system"
           else
-            ${{ steps.build_dir.outputs.BUILD_DIR }}\\shuttle_system.exe
+            "${{ steps.build_dir.outputs.BUILD_DIR }}"\\shuttle_system.exe
           fi
