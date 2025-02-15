@@ -29,6 +29,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Clean build directory
+        # Use bash even on Windows to ensure we start with a clean build directory.
         shell: bash
         run: |
           if [ -d "${{ github.workspace }}/build" ]; then
@@ -55,6 +56,12 @@ jobs:
         run: |
           cmake --build "${{ steps.build_dir.outputs.BUILD_DIR }}" --config ${{ matrix.build_type }}
 
+      - name: List build directory contents (for debugging)
+        shell: bash
+        run: |
+          echo "Listing build directory contents:"
+          ls -la "${{ steps.build_dir.outputs.BUILD_DIR }}"
+
       - name: Run shuttle_system executable on Ubuntu
         if: ${{ matrix.os == 'ubuntu-latest' }}
         shell: bash
@@ -62,9 +69,12 @@ jobs:
           # Pipe input "4" to the interactive executable so it exits gracefully.
           echo "4" | "${{ steps.build_dir.outputs.BUILD_DIR }}/shuttle_system"
 
-      - name: Run shuttle_system executable on Windows
+      - name: Run shuttle_system executable on Windows (using PowerShell)
         if: ${{ matrix.os == 'windows-latest' }}
-        shell: bash
+        shell: pwsh
         run: |
-          # Pipe input "4" to the interactive executable so it exits gracefully.
-          echo "4" | "${{ steps.build_dir.outputs.BUILD_DIR }}/shuttle_system.exe"
+          Write-Output "Listing build directory contents for debugging:" 
+          Get-ChildItem -Path "${env:GITHUB_WORKSPACE}\build"
+          Write-Output "Running executable:"
+          # Pipe input "4" to the executable so it exits gracefully.
+          "4" | & "${env:GITHUB_WORKSPACE}\build\shuttle_system.exe"
