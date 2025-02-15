@@ -6,7 +6,7 @@ Case Study Problem Statement : [Case Study PDF](https://github.com/Ash-codes18/S
 
 ## Video Demonstration
 
-[![Shuttle Management System.mp4](https://idealer.io/wp-content/themes/iDealer/images/aicar.png)]()
+[![Shuttle Management System.mp4](https://idealer.io/wp-content/themes/iDealer/images/aicar.png)](https://drive.google.com/file/d/1MfQr_NpBKLqt_oY2hqDmVi38b5ZgWPWR/view?usp=sharing)
 
 ## Features
 
