@@ -1,0 +1,54 @@
+name: CMake for Multiple Platforms
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        build_type: [Release]
+        # Define compilers for each OS.
+        include:
+          - os: windows-latest
+            c_compiler: cl
+            cpp_compiler: cl
+          - os: ubuntu-latest
+            c_compiler: gcc
+            cpp_compiler: g++
+          - os: ubuntu-latest
+            c_compiler: clang
+            cpp_compiler: clang++
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Set build output directory
+        id: build_dir
+        run: |
+          echo "BUILD_DIR=${{ github.workspace }}/build" >> $GITHUB_OUTPUT
+
+      - name: Configure CMake
+        run: |
+          cmake -B ${{ steps.build_dir.outputs.BUILD_DIR }} \
+                -S ${{ github.workspace }} \
+                -DCMAKE_C_COMPILER=${{ matrix.c_compiler }} \
+                -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }} \
+                -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+
+      - name: Build project
+        run: cmake --build ${{ steps.build_dir.outputs.BUILD_DIR }} --config ${{ matrix.build_type }}
+
+      - name: Run shuttle_system executable
+        run: |
+          if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
+            ${{ steps.build_dir.outputs.BUILD_DIR }}/shuttle_system
+          else
+            ${{ steps.build_dir.outputs.BUILD_DIR }}\\shuttle_system.exe
+          fi
