@@ -29,7 +29,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Clean build directory
-        # Use bash even on Windows to ensure we start with a clean build directory.
         shell: bash
         run: |
           if [ -d "${{ github.workspace }}/build" ]; then
@@ -76,5 +75,5 @@ jobs:
           Write-Output "Listing build directory contents for debugging:" 
           Get-ChildItem -Path "${env:GITHUB_WORKSPACE}\build"
           Write-Output "Running executable:"
-          # Pipe input "4" to the executable so it exits gracefully.
-          "4" | & "${env:GITHUB_WORKSPACE}\build\shuttle_system.exe"
+          # On Visual Studio generator, the executable is located in the Release folder.
+          "4" | & "${env:GITHUB_WORKSPACE}\build\Release\shuttle_system.exe"
